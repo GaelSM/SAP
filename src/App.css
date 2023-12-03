@@ -1,0 +1,128 @@
+:root {
+  --Gray: #808080;
+  --Black: #000;
+  --Red: #ff0000;
+  --White: #fff;
+  --Light-red: #ff9898;
+  --Darker-red: #ff4545;
+  --Light-gray: #8080800c;
+  --Yellow: #ffee03;
+  --Darker-yellow: #ffd503;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  gap: 4rem;
+
+  & .buttons {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+  }
+}
+
+.cerrar {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  font-size: 40px;
+  transition: color .5s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--Darker-red);
+  }
+}
+
+button {
+  font-family: inherit;
+  border-radius: none;
+  border: 1px solid var(--Black);
+  padding: .5rem 1rem;
+  background-color: transparent;
+  transition: background-color .3s ease;
+
+  &:hover {
+    transition: background-color .5s ease;
+    cursor: pointer;
+    color: var(--White);
+    background-color: var(--Black);
+  }
+
+  &:disabled {
+    cursor: auto;
+    color: var(--Gray);
+    background-color: var(--Light-gray);
+    border-color: var(--Gray);
+  }
+}
+
+label {
+  padding: .5rem;
+  position: relative;
+  border: 1px solid var(--Black);
+  transition: background-color .5s ease;
+
+  &:hover{
+    background-color: var(--Black);
+    color: var(--White);
+  }
+
+  &:has(input:checked) {
+    color: var(--White);
+    background-color: var(--Black);
+  }
+
+  & input[type="radio"] {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+input[type="text"] {
+  font-family: inherit;
+  outline: none;
+  border: 1px solid var(--Black);
+  padding: .5rem;
+  text-align: center;
+  &::placeholder{
+    color: var(--Black);
+  }
+}
+
+.left, .sap-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.sap {
+  display: flex;
+  gap: 79px;
+}

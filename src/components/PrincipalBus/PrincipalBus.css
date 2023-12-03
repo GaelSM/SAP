@@ -1,0 +1,18 @@
+.principal-bus {
+    display: flex;
+    gap: 9px;
+
+    & .pin{
+        width: 1px;
+        height: 100%;
+        background-color: var(--Black);
+
+        &.disabled {
+            background-color: var(--Gray);
+        }
+
+        &.active {
+            background-color: var(--Darker-red);
+        }
+    }
+}

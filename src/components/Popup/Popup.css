@@ -1,0 +1,53 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000ad;
+    display: grid;
+    place-items: center;
+  
+    & .span {
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+  
+    & .popup {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      width: 500px;
+      height: 70vh;
+      background-color: var(--White);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+  
+      & header {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+  
+        & button {
+          width: 100px;
+        }
+      }
+  
+      & main {
+        justify-content: center;
+        gap: 1rem;
+  
+        & button {
+          width: 45px;
+        }
+      }
+  
+      & .cerrar {
+        top: .5rem;
+      }
+    }
+  }

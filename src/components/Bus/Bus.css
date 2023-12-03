@@ -1,0 +1,183 @@
+.block .bus {
+    position: absolute;
+    display: flex;
+
+    & .pin {
+        height: 1px;
+        background-color: var(--Black);
+
+        &.active {
+            background-color: var(--Darker-red);
+        }
+    }
+
+    &.bus-inactive {
+        & .pin {
+            background-color: var(--Gray);
+
+            &.active {
+                background-color: var(--Gray);
+            }
+        }
+    }
+
+    &.right,
+    &.left {
+        width: 150px;
+        flex-direction: column;
+        gap: 2px;
+
+        &.four {
+            & .pin {
+                &:first-child {
+                    width: 110px;
+                }
+
+                &:nth-child(1) {
+                    width: 120px;
+                }
+
+                &:nth-child(2) {
+                    width: 130px;
+                }
+
+                &:nth-child(3) {
+                    width: 140px;
+                }
+            }
+        }
+
+        &.eight {
+            & .pin {
+                &:first-child {
+                    width: 70px;
+                }
+
+                &:nth-child(1) {
+                    width: 80px;
+                }
+
+                &:nth-child(2) {
+                    width: 90px;
+                }
+
+                &:nth-child(3) {
+                    width: 100px;
+                }
+
+                &:nth-child(4) {
+                    width: 110px;
+                }
+
+                &:nth-child(5) {
+                    width: 120px;
+                }
+
+                &:nth-child(6) {
+                    width: 130px;
+                }
+
+                &:nth-child(7) {
+                    width: 140px;
+                }
+            }
+        }
+    }
+
+    &.right {
+        right: -150px;
+    }
+
+    &.left {
+        transform: rotate(180deg);
+        left: -150px;
+    }
+
+    &.bottom {
+        width: 100%;
+        height: 15px;
+        bottom: -15px;
+        gap: 15px;
+        justify-content: center;
+
+        & .pin {
+            width: 1px;
+            height: 16px;
+            z-index: 0;
+        }
+
+        &.bus-inactive {
+            & .pin {
+                background-color: var(--Gray);
+
+                &.active {
+                    background-color: var(--Gray);
+                }
+            }
+        }
+
+        &.bus-active {
+            & .pin {
+                background-color: var(--Black);
+
+                &.active {
+                    background-color: var(--Darker-red);
+                }
+            }
+        }
+    }
+}
+
+.block.IR .bus {
+    &.four {
+        bottom: 10px;
+    }
+
+    &.eight {
+        top: 10px;
+    }
+
+    &.bottom {
+        bottom: -15px;
+    }
+}
+
+.block.A .bus {
+    &.eight.in {
+        top: 10px;
+    }
+
+    &.eight.out {
+        bottom: 2px;
+    }
+
+    &.eight.bottom {
+        bottom: -15px;
+    }
+}
+
+.block.ALU .bus {
+    &.eight {
+        top: 5px;
+    }
+}
+
+.block.B .bus {
+    &.eight.in {
+        top: 10px;
+    }
+
+    &.bottom {
+        top: -16px;
+    }
+}
+
+.block.OUT .bus {
+    &.eight.left {
+        top: 2px;
+    }
+
+    &.eight.bottom {
+        bottom: -15px;
+    }
+}

@@ -1,0 +1,76 @@
+.block {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Black);
+  position: relative;
+
+  &:has(.RAM):hover {
+    cursor: pointer;
+  }
+
+  & .name {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+  }
+}
+
+.block.disabled {
+  background-color: var(--Light-gray);
+  border-color: var(--Gray);
+  color: var(--Gray);
+
+  & .bits {
+    & .bit {
+      border: 1px solid;
+      background-color: var(--Light-gray);
+
+      &.active {
+        background-color: var(--Light-gray);
+
+        & p {
+          color: var(--Gray);
+        }
+      }
+    }
+  }
+
+  & .pin {
+    height: 1px;
+    background-color: var(--Gray);
+  }
+}
+
+.block.ALU.disabled {
+  & .bits {
+    & .bit {
+      &.active {
+        & p {
+          color: var(--Gray);
+        }
+      }
+    }
+  }
+}
+
+.block.ALU .bits, .block.RES .bits {
+  & .bit {
+    width: auto;
+    height: auto;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+
+    &.active {
+      background-color: transparent;
+      border: none;
+      & p{
+        color: var(--Black);
+      }
+    }
+  }
+}

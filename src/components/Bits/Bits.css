@@ -1,0 +1,25 @@
+.bits {
+  display: flex;
+  gap: 3px;
+
+  & .bit {
+    background-color: var(--White);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1px solid;
+    border-radius: 5px;
+
+    &.active {
+      border-color: transparent;
+      background-color: var(--Light-red);
+
+      & p {
+        color: var(--Red);
+      }
+    }
+  }
+
+}
