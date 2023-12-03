@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react-swc'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  bae: "https://gaelsm.github.io/SAP"
+  base: "https://gaelsm.github.io/SAP"
 })
